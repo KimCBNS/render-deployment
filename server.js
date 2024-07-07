@@ -12,4 +12,8 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
+app.get('/user', (req, res) => {
+  return res._construct.staus(200).json({message: "Hello World", status: "Success!"})
+});
+
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
